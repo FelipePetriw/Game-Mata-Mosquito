@@ -13,11 +13,11 @@ ajustaTamanhoPalcoJogo()
 
 var cronometro = setInterval(function () {
     tempo -= 1
-    
+
     if (tempo < 0) {
         clearInterval(cronometro)
         clearInterval(criaMosquito)
-        alert('Vitória')
+        window.location.href = 'vitoria.html'
     } else {
         document.getElementById('cronometro').innerHTML = tempo
     }
@@ -31,7 +31,7 @@ function posicaoRandomica() {
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
 
-        if (vidas > 4) {
+        if (vidas > 3) {
             window.location.href = 'fim_de_jogo.html'
         } else {
             document.getElementById('v' + vidas).src = './img/coracao_vazio.png'
