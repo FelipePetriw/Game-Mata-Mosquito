@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +11,27 @@
     <script src="./scripts.js"></script>
 
 </head>
-<body onresize="ajustaTamanhoPalcoJogo()">
-    
-    
 
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <div class="painel">
+
+        <div class="vidas">
+            <img src="./img/coracao_vazio.png" alt="desenho de coração em branco">
+            <img src="./img/coracao_cheio.png" alt="desenho de coração em vermelho">
+            <img src="./img/coracao_cheio.png" alt="desenho de coração em vermelho">
+        </div>
+
+        <div class="cronometro">Tempo Restante ?</div>
+    </div>
 
     <script>
         posicaoRandomica()
 
-        setInterval(function() {
+        setInterval(function () {
             posicaoRandomica()
         }, 1000)
     </script>
 </body>
+
 </html>
